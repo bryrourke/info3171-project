@@ -1,0 +1,42 @@
+/* Command TV – reusable layout patterns */
+.ctv-main, .ctv-main *, .ctv-header, .ctv-header * { box-sizing: border-box; }
+.ctv-main { max-width: 1440px; margin: auto; padding: 24px; }
+.ctv-main section + section { margin-top: 24px; }
+.ctv-header { display: flex; justify-content: space-between; gap: 16px; padding: 16px 24px; background: #E1C8F6; color: #3B118D; }
+.ctv-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; }
+.ctv-kpi { grid-column: span 4; }
+.ctv-chart { grid-column: span 6; }
+.ctv-full { grid-column: 1 / -1; }
+.ctv-card { min-width: 0; padding: 16px; border-radius: 8px; background: #fff; box-shadow: 0 2px 8px rgba(59, 17, 141, 0.12); }
+@media (max-width: 1199px) {
+  .ctv-grid { gap: 16px; }
+  .ctv-main { padding: 16px; }
+}
+@media (max-width: 767px) {
+  .ctv-kpi, .ctv-chart { grid-column: 1 / -1; }
+  .ctv-header { flex-wrap: wrap; }
+}
+
+/* Pattern library documentation and preview styling */
+body.layout-page { margin: 0; background: #f7f5fa; color: #3B118D; font-family: Lato, Arial, sans-serif; line-height: 1.6; }
+.layout-page * { box-sizing: border-box; }
+.layout-top { background: #3B118D; color: white; padding: 20px 24px; }
+.layout-top a { color: white; }
+.layout-nav { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+.layout-doc { max-width: 1100px; margin: auto; padding: 24px; }
+.layout-doc > section { background: white; padding: clamp(16px, 3vw, 32px); border-radius: 8px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(59,17,141,.12); }
+.layout-doc h1, .layout-doc h2, .layout-doc h3 { line-height: 1.25; }
+.layout-doc figure { margin: 24px 0; }
+.layout-doc img { display: block; max-width: 100%; height: auto; margin: auto; }
+.layout-doc figcaption { font-size: .9rem; margin-top: 8px; }
+.layout-doc table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.layout-doc th, .layout-doc td { padding: 10px; text-align: left; border-bottom: 1px solid #CBC8F6; overflow-wrap: anywhere; }
+.layout-doc th { background: #E1C8F6; }
+.layout-doc pre { background: #f7f5fa; padding: 16px; border-radius: 8px; overflow: auto; color: #31264a; line-height: 1.5; }
+.layout-demo { border: 1px solid #CBC8F6; border-radius: 8px; overflow: hidden; background: #f7f5fa; }
+.layout-demo .ctv-kpi { min-height: 80px; background: #C8E1F6; }
+.layout-demo .ctv-kpi:nth-child(2) { background: #CBC8F6; }
+.layout-demo .ctv-kpi:nth-child(3) { background: #E1C8F6; }
+.layout-demo .ctv-chart { min-height: 120px; }
+.layout-demo-footer { padding: 16px 24px; background: #E1C8F6; color: #3B118D; }
+@media (max-width: 767px) { .layout-doc { padding: 16px; } .layout-doc th, .layout-doc td { padding: 6px; font-size: .8rem; } }

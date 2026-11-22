@@ -16,6 +16,9 @@ p {
   font-size: 1rem;
   font-family: "Lato", sans-serif;
 }
+pre {
+  text-align: left;
+}
 h1 {
   font-size: 40px;
 }
@@ -63,7 +66,7 @@ a {
   padding: 0.2rem 0.4rem;
   width: 100%;
 }
-section {
+.library-section {
   display: none;
   margin: 1rem 1.8rem;
 }
@@ -72,7 +75,7 @@ section {
   margin-bottom: 1.6rem;
 }
 
-section.active {
+.library-section.active {
   display: block;
 }
 footer {
@@ -127,4 +130,8 @@ footer {
   border-radius: 12px;
 }
 
+#styling-layout h5 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 
