@@ -1,0 +1,62 @@
+
+<!-- 1. Button -->
+<button type="button" id="applyFilters">Apply Filters</button>
+
+<!-- 2. Text Input -->
+<label for="channelSearch">Search YouTube Channel:</label>
+<input type="text" id="channelSearch" placeholder="Enter channel name">
+
+<!-- 3. Select Dropdown -->
+<label for="category">Select Category:</label>
+<select id="category">
+    <option value="all">All Categories</option>
+    <option value="gaming">Gaming</option>
+    <option value="music">Music</option>
+    <option value="entertainment">Entertainment</option>
+    <option value="education">Education</option>
+</select>
+
+<!-- 4. Table -->
+<h2>Top YouTube Channels</h2>
+<table id="channelTable">
+    <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Channel</th>
+            <th>Category</th>
+            <th>Country</th>
+            <th>Subscribers</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Channel A</td>
+            <td>Gaming</td>
+            <td>Canada</td>
+            <td>100M</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Channel B</td>
+            <td>Music</td>
+            <td>United States</td>
+            <td>85M</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Channel C</td>
+            <td>Entertainment</td>
+            <td>India</td>
+            <td>75M</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- 5. Icon -->
+<i class="fa-brands fa-youtube" aria-label="YouTube"></i>
+
+<!-- 6. Country Flag -->
+<h2>Country With Most Top YouTube Channels</h2>
+<span role="img" aria-label="United States flag">🇺🇸</span>
+<p>Top Country: To be determined</p>
