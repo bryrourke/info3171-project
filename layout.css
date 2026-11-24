@@ -23,8 +23,8 @@ body.layout-page { margin: 0; background: #f7f5fa; color: #3B118D; font-family: 
 .layout-top { background: #3B118D; color: white; padding: 20px 24px; }
 .layout-top a { color: white; }
 .layout-nav { display: flex; flex-wrap: wrap; gap: 8px 24px; }
-.layout-doc { max-width: 1100px; margin: auto; padding: 24px; }
-.layout-doc > section { background: white; padding: clamp(16px, 3vw, 32px); border-radius: 8px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(59,17,141,.12); }
+.layout-doc { max-width: none; margin: 1rem 1.8rem; padding: 0; }
+.layout-doc > section { background: transparent; padding: 0; border-radius: 0; margin-bottom: 3rem; box-shadow: none; }
 .layout-doc h1, .layout-doc h2, .layout-doc h3 { line-height: 1.25; }
 .layout-doc figure { margin: 24px 0; }
 .layout-doc img { display: block; max-width: 100%; height: auto; margin: auto; }
@@ -40,3 +40,6 @@ body.layout-page { margin: 0; background: #f7f5fa; color: #3B118D; font-family: 
 .layout-demo .ctv-chart { min-height: 120px; }
 .layout-demo-footer { padding: 16px 24px; background: #E1C8F6; color: #3B118D; }
 @media (max-width: 767px) { .layout-doc { padding: 16px; } .layout-doc th, .layout-doc td { padding: 6px; font-size: .8rem; } }
+#styling-layout { color: #11268D; font-family: "Lato", sans-serif; }
+#styling-layout h3 { font-family: "Montserrat", sans-serif; font-size: 30px; font-weight: 700; }
+#styling-layout p { font-size: 16px; }
