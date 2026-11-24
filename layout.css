@@ -34,9 +34,9 @@ body.layout-page { margin: 0; background: #f7f5fa; color: #3B118D; font-family: 
 .layout-doc th { background: #E1C8F6; }
 .layout-doc pre { background: #f7f5fa; padding: 16px; border-radius: 8px; overflow: auto; color: #31264a; line-height: 1.5; }
 .layout-demo { border: 1px solid #CBC8F6; border-radius: 8px; overflow: hidden; background: #f7f5fa; }
-.layout-demo .ctv-kpi { min-height: 80px; background: #C8E1F6; }
-.layout-demo .ctv-kpi:nth-child(2) { background: #CBC8F6; }
-.layout-demo .ctv-kpi:nth-child(3) { background: #E1C8F6; }
+.layout-demo .ctv-kpi { min-height: 80px; background: #CBE1F6; }
+.layout-demo .ctv-kpi:nth-child(2) { background: #CBCBF6; }
+.layout-demo .ctv-kpi:nth-child(3) { background: #E1CBF6; }
 .layout-demo .ctv-chart { min-height: 120px; }
 .layout-demo-footer { padding: 16px 24px; background: #E1C8F6; color: #3B118D; }
 @media (max-width: 767px) { .layout-doc { padding: 16px; } .layout-doc th, .layout-doc td { padding: 6px; font-size: .8rem; } }
