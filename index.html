@@ -1,126 +1,229 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CTV Command Pattern Library</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="layout.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CTV Command Pattern Library</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="layout.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-</head>
-<body>
-  <header class="row align-items-center">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="row align-items-center">
       <div class="ctv-logo-container d-flex col-3 justify-content-center">
-        <img src="./assets/logos/CTV.png" alt="CTV Command logo" class="ctv-logo">
+        <img
+          src="./assets/logos/CTV.png"
+          alt="CTV Command logo"
+          class="ctv-logo"
+        />
       </div>
       <div class="col-9 d-flex justify-content-center text-wrap">
         <h1 class="p-0">CTV Command Pattern Library</h1>
       </div>
-  </header>
-  <main class="container m-auto mt-3 p-2">
-    <div class="row">
-      <div class="left-panel col-3">
-        <nav>
-          <div class="nav-group">
-            <ul class="navbar-nav">
-              <li><h5>General</h5></li>
-                <li class="nav-item"><button id="nav-colours" class="nav-link nav-btn active">Colours</button></li>
-                <li class="nav-item"><button id="nav-typography" class="nav-link nav-btn">Typography</button></li>
-                <li class="nav-item"><button id="nav-styling-layout" class="nav-link nav-btn">Styling & Layout</button></li>
-            </ul>
-          </div>
-          <div class="nav-group">
-            <ul class="navbar-nav">
-              <li><h5>Elements</h5></li>
-                <li class="nav-item"><button id="nav-buttons" class="nav-link nav-btn">Buttons</button></li>
-                <li class="nav-item"><button id="nav-form-inputs" class="nav-link nav-btn">Form Inputs</button></li>
-                <li class="nav-item"><button id="nav-tables" class="nav-link nav-btn">Tables</button></li>
-                <li class="nav-item"><button id="nav-icons" class="nav-link nav-btn">Icons</button></li>
-                <li class="nav-item"><button id="nav-navigation-bar" class="nav-link nav-btn">Navigation Bar</button></li>
-                <li class="nav-item"><button id="nav-data-brush" class="nav-link nav-btn">Data Brushing</button></li>
-            </ul>
-          </div>  
-          <div class="nav-group">
-            <ul class="navbar-nav">
-              <li><h5>Data Visualizations</h5></li>
-                <li class="nav-item"><button id="nav-line-graphs" class="nav-link nav-btn">Line Graphs</button></li>
-                <li class="nav-item"><button id="nav-bar-graphs" class="nav-link nav-btn">Bar Graphs</button></li>
-                <li class="nav-item"><button id="nav-single-value-charts" class="nav-link nav-btn">Single Value Charts</button></li>
-                <li class="nav-item"><button id="nav-area-charts" class="nav-link nav-btn">Area Charts</button></li>
-                <li class="nav-item"><button id="nav-scatter-plots" class="nav-link nav-btn">Scatter Plots</button></li>
-                <li class="nav-item"><button id="nav-pie-charts" class="nav-link nav-btn">Pie Charts</button></li>
-                <li class="nav-item"><button id="nav-donut-charts" class="nav-link nav-btn">Donut Charts</button></li>
-            </ul>
-          </div>  
-        </nav>
-      </div>
-      <div class="right-panel col-9">
-        <section id="colours" class="active library-section">
-          <h2 class="section-heading">Colours</h2>
-
-          <div class="colour-group-container mb-5">
-            <h3 class="mb-4">Brand Colours</h3>
-            <div class="d-flex gap-3 mb-4">
-              <div class="colour-preview" style="background-color: #3B118D; color: #FEFAFB">
-                <div>#3B118D</div>
-              </div>
-              <div class="colour-preview" style="background-color: #B21665; color: #FEFAFB">
-                <div>#B21665</div>
-              </div>
+    </header>
+    <main class="container m-auto mt-3 p-2">
+      <div class="row">
+        <div class="left-panel col-3">
+          <nav>
+            <div class="nav-group">
+              <ul class="navbar-nav">
+                <li><h5>General</h5></li>
+                <li class="nav-item">
+                  <button id="nav-colours" class="nav-link nav-btn active">
+                    Colours
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button id="nav-typography" class="nav-link nav-btn">
+                    Typography
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button id="nav-styling-layout" class="nav-link nav-btn">
+                    Styling & Layout
+                  </button>
+                </li>
+              </ul>
             </div>
-            <hr>
-          </div>
+            <div class="nav-group">
+              <ul class="navbar-nav">
+                <li><h5>Elements</h5></li>
+                <li class="nav-item">
+                  <button id="nav-buttons" class="nav-link nav-btn">
+                    Buttons
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button id="nav-form-inputs" class="nav-link nav-btn">
+                    Form Inputs
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button id="nav-tables" class="nav-link nav-btn">
+                    Tables
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button id="nav-icons" class="nav-link nav-btn">Icons</button>
+                </li>
+                <li class="nav-item">
+                  <button id="nav-navigation-bar" class="nav-link nav-btn">
+                    Navigation Bar
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button id="nav-data-brush" class="nav-link nav-btn">
+                    Data Brushing
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-group">
+              <ul class="navbar-nav">
+                <li><h5>Data Visualizations</h5></li>
+                <li class="nav-item">
+                  <button id="nav-line-graphs" class="nav-link nav-btn">
+                    Line Graphs
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button id="nav-bar-graphs" class="nav-link nav-btn">
+                    Bar Graphs
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button id="nav-single-value-charts" class="nav-link nav-btn">
+                    Single Value Charts
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button id="nav-area-charts" class="nav-link nav-btn">
+                    Area Charts
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button id="nav-scatter-plots" class="nav-link nav-btn">
+                    Scatter Plots
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button id="nav-pie-charts" class="nav-link nav-btn">
+                    Pie Charts
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button id="nav-donut-charts" class="nav-link nav-btn">
+                    Donut Charts
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="right-panel col-9">
+          <section id="colours" class="active library-section">
+            <h2 class="section-heading">Colours</h2>
 
-          <div class="colour-group-container mb-5">
-            <h3 class="mb-4">Colour Scheme</h3>
-            <div class="mb-4">
-              <div class="d-flex gap-3 mb-3">
-                <div class="colour-preview" style="background-color: #11268D; color: #FEFAFB">
-                  <div>#11268D</div>
-                </div>
-                <div class="colour-preview" style="background-color: #3B118D; color: #FEFAFB">
+            <div class="colour-group-container mb-5">
+              <h3 class="mb-4">Brand Colours</h3>
+              <div class="d-flex gap-3 mb-4">
+                <div
+                  class="colour-preview"
+                  style="background-color: #3b118d; color: #fefafb"
+                >
                   <div>#3B118D</div>
                 </div>
-                <div class="colour-preview" style="background-color: #78118D; color: #FEFAFB">
-                  <div>#78118D</div>
+                <div
+                  class="colour-preview"
+                  style="background-color: #b21665; color: #fefafb"
+                >
+                  <div>#B21665</div>
                 </div>
               </div>
-              <p>Analogous colour scheme based on the CTV Command's logo font colour.</p>
+              <hr />
             </div>
-            <div class="mb-4">
-              <div class="d-flex gap-3 mb-3">
-                <div class="colour-preview" style="background-color: #cbe1f6">
-                  <div>#CBE1F6</div>
-                </div>
-                <div class="colour-preview" style="background-color: #cbcbf6">
-                  <div>#CBCBF6</div>
-                </div>
-                <div class="colour-preview" style="background-color: #e1cbf6">
-                  <div>#E1CBF6</div>
-                </div>
-              </div>
-              <p>An analogous pastel colour scheme was created by adding tint to the original colour scheme.</p>
-            </div>
-            <hr>
-          </div>
 
-          <div class="colour-group-container mb-5">
-            <h3 class="mb-4">Functional Colours</h3>
+            <div class="colour-group-container mb-5">
+              <h3 class="mb-4">Colour Scheme</h3>
+              <div class="mb-4">
+                <div class="d-flex gap-3 mb-3">
+                  <div
+                    class="colour-preview"
+                    style="background-color: #11268d; color: #fefafb"
+                  >
+                    <div>#11268D</div>
+                  </div>
+                  <div
+                    class="colour-preview"
+                    style="background-color: #3b118d; color: #fefafb"
+                  >
+                    <div>#3B118D</div>
+                  </div>
+                  <div
+                    class="colour-preview"
+                    style="background-color: #78118d; color: #fefafb"
+                  >
+                    <div>#78118D</div>
+                  </div>
+                </div>
+                <p>
+                  Analogous colour scheme based on the CTV Command's logo font
+                  colour.
+                </p>
+              </div>
+              <div class="mb-4">
+                <div class="d-flex gap-3 mb-3">
+                  <div class="colour-preview" style="background-color: #cbe1f6">
+                    <div>#CBE1F6</div>
+                  </div>
+                  <div class="colour-preview" style="background-color: #cbcbf6">
+                    <div>#CBCBF6</div>
+                  </div>
+                  <div class="colour-preview" style="background-color: #e1cbf6">
+                    <div>#E1CBF6</div>
+                  </div>
+                </div>
+                <p>
+                  An analogous pastel colour scheme was created by adding tint
+                  to the original colour scheme.
+                </p>
+              </div>
+              <hr />
+            </div>
+
+            <div class="colour-group-container mb-5">
+              <h3 class="mb-4">Functional Colours</h3>
               <div class="d-flex gap-3 mb-2">
-                <div class="colour-preview" style="background-color: #11268D; color: #FEFAFB">
+                <div
+                  class="colour-preview"
+                  style="background-color: #11268d; color: #fefafb"
+                >
                   <div>#11268D</div>
                 </div>
                 <div>
-                  <p><b>Application</b> | heading, navigation, content, and data text</p>
+                  <p>
+                    <b>Application</b> | heading, navigation, content, and data
+                    text
+                  </p>
                 </div>
               </div>
               <div class="d-flex gap-3 mb-2">
-                <div class="colour-preview" style="background-color: #b21665; color: #FEFAFB">
+                <div
+                  class="colour-preview"
+                  style="background-color: #b21665; color: #fefafb"
+                >
                   <div>#B21665</div>
                 </div>
                 <div>
@@ -132,7 +235,10 @@
                   <div>#CBE1F6</div>
                 </div>
                 <div>
-                  <p><b>Application</b> | Navigation Menu Active Page, Chart KPI #1 background</p>
+                  <p>
+                    <b>Application</b> | Navigation Menu Active Page, Chart KPI
+                    #1 background
+                  </p>
                 </div>
               </div>
               <div class="d-flex gap-3 mb-2">
@@ -144,149 +250,198 @@
                 </div>
               </div>
               <div class="d-flex gap-3 mb-2">
-                <div class="colour-preview" style="background-color: #E1CBF6">
+                <div class="colour-preview" style="background-color: #e1cbf6">
                   <div>#E1CBF6</div>
                 </div>
                 <div>
-                  <p><b>Application</b> | Footer, table header, chart KPI #3 background</p>
+                  <p>
+                    <b>Application</b> | Footer, table header, chart KPI #3
+                    background
+                  </p>
                 </div>
               </div>
-          </div>
+            </div>
+          </section>
 
-        </section>
-        <section id="typography" class="library-section">
-          <h2 class="section-heading">Typography</h2>
-          <div class="heading-container mb-5">
-            <h3 class="mb-4">Headings</h3>
-            <div class="d-flex gap-3">
-              <div class="font-preview">
-                <div>Aa</div>
-              </div>
-              <div class="font-desc">
-                <p>Typeface | Montserrat</p>
-                <p>font-family | 'Montserrat', sans-serif</p>
-              </div>
-            </div>
-            <div class="mt-4">
-              <div>
-                <h1>CTV Command Heading One</h1>
-                <p>40px | bold | Montserrat</p>
-                <hr/>
-              </div>
-            </div>
-            <div class="mt-4">
-              <div>
-                <h2>CTV Command Heading Two</h2>
-                <p>36px | bold | Montserrat</p>
-                <hr/>
-              </div>
-            </div>
-            <div class="mt-4">
-              <div>
-                <h3>CTV Command Heading Three</h3>
-                <p>30px | bold | Montserrat</p>
-                <hr/>
-              </div>
-            </div>
-            <div class="mt-4">
-              <div>
-                <h4>CTV Command Heading Four</h4>
-                <p>24px | bold | Montserrat</p>
-                <hr/>
-              </div>
-            </div>
-            <div class="mt-4">
-              <div>
-                <h5>CTV Command Heading Five</h5>
-                <p>20px | bold | Montserrat</p>
-                <hr/>
-              </div>
-            </div>
-          </div>
-
-          <div class="nav-text-container mb-5">
-            <h3 class="mb-4">Navigation Menu</h3>
-            <div class="d-flex gap-3">
-              <div class="font-preview">
-                <div>Aa</div>
-              </div>
-              <div class="font-desc">
-                <p>Typeface | Montserrat</p>
-                <p>font-family | 'Montserrat', sans-serif</p>
-              </div>
-            </div>
-            <div class="mt-4">
-              <div>
-                <h5>CTV Command Navigation Group</h5>
-                <p>20px | bold | Montserrat</p>
-                <hr/>
-              </div>
-            </div>
-            <div class="mt-4">
-              <div>
-                <p class="nav-bar-heading">CTV Command Navigation Item</p>
-                <p>18px | normal | Montserrat</p>
-                <hr/>
-              </div>
-            </div>
-          </div>
-          <div class="chart-text-container mb-5">
-            <h3 class="mb-4">Chart Data</h3>
-            <div class="d-flex gap-3">
-              <div class="font-preview">
-                <div>Aa</div>
-              </div>
-              <div class="font-desc">
-                <p>Typeface | Merriweather</p>
-                <p>font-family | 'Merriweather', serif</p>
-              </div>
-            </div>
-            <div class="mt-4">
-              <div>
-                <div class="d-flex flex-wrap justify-content-between">
-                  <p class="chart-text-example">(20, 67)</p>
-                  <p class="chart-text-example">x = 23</p>
-                  <p class="chart-text-example">$556k</p>
-                  <p class="chart-text-example">Feb</p>
-                  <p class="chart-text-example">72%</p>
+          <section id="typography" class="library-section">
+            <h2 class="section-heading">Typography</h2>
+            <div class="heading-container mb-5">
+              <h3 class="mb-4">Headings</h3>
+              <div class="d-flex gap-3">
+                <div class="font-preview">
+                  <div>Aa</div>
                 </div>
-                <p>16px | normal | Merriweather</p>
-                <hr/>
+                <div class="font-desc">
+                  <p>Typeface | Montserrat</p>
+                  <p>font-family | 'Montserrat', sans-serif</p>
+                </div>
+              </div>
+              <div class="mt-4">
+                <div>
+                  <h1>CTV Command Heading One</h1>
+                  <p>40px | bold | Montserrat</p>
+                  <hr />
+                </div>
+              </div>
+              <div class="mt-4">
+                <div>
+                  <h2>CTV Command Heading Two</h2>
+                  <p>36px | bold | Montserrat</p>
+                  <hr />
+                </div>
+              </div>
+              <div class="mt-4">
+                <div>
+                  <h3>CTV Command Heading Three</h3>
+                  <p>30px | bold | Montserrat</p>
+                  <hr />
+                </div>
+              </div>
+              <div class="mt-4">
+                <div>
+                  <h4>CTV Command Heading Four</h4>
+                  <p>24px | bold | Montserrat</p>
+                  <hr />
+                </div>
+              </div>
+              <div class="mt-4">
+                <div>
+                  <h5>CTV Command Heading Five</h5>
+                  <p>20px | bold | Montserrat</p>
+                  <hr />
+                </div>
               </div>
             </div>
-          </div>
-          <div class="content-text-container mb-5">
-            <h3 class="mb-4">Contents</h3>
-            <div class="d-flex gap-3">
-              <div class="font-preview">
-                <div>Aa</div>
-              </div>
-              <div class="font-desc">
-                <p>Typeface | Lato</p>
-                <p>font-family | 'Lato', sans-serif</p>
-              </div>
-            </div>
-            <div class="mt-4">
-              <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper quam vitae tellus pulvinar, non sagittis ligula bibendum. Fusce odio velit, porttitor sed maximus nec, lacinia quis justo. Integer ipsum libero, tincidunt quis nulla at, ullamcorper luctus nisl. Mauris sed pulvinar lacus, a convallis justo. Mauris ac sem odio. Ut ac commodo urna, vitae tempus purus. Ut hendrerit porttitor dapibus. Praesent ornare, turpis in luctus pharetra, lacus erat faucibus nulla, tempus vestibulum purus enim et nunc. Aenean ultricies ultricies cursus. Sed ut eleifend libero. Donec aliquam magna id velit dictum pharetra. Suspendisse elementum porttitor enim vitae convallis. Duis non est.</p>
-                <p>16px | normal | Lato</p>
-                <div></div>
-                <hr/>
-              </div>
-            </div>
-          </div>
 
-        </section>
+            <div class="nav-text-container mb-5">
+              <h3 class="mb-4">Navigation Menu</h3>
+              <div class="d-flex gap-3">
+                <div class="font-preview">
+                  <div>Aa</div>
+                </div>
+                <div class="font-desc">
+                  <p>Typeface | Montserrat</p>
+                  <p>font-family | 'Montserrat', sans-serif</p>
+                </div>
+              </div>
+              <div class="mt-4">
+                <div>
+                  <h5>CTV Command Navigation Group</h5>
+                  <p>20px | bold | Montserrat</p>
+                  <hr />
+                </div>
+              </div>
+              <div class="mt-4">
+                <div>
+                  <p class="nav-bar-heading">CTV Command Navigation Item</p>
+                  <p>18px | normal | Montserrat</p>
+                  <hr />
+                </div>
+              </div>
+            </div>
+            <div class="chart-text-container mb-5">
+              <h3 class="mb-4">Chart Data</h3>
+              <div class="d-flex gap-3">
+                <div class="font-preview">
+                  <div>Aa</div>
+                </div>
+                <div class="font-desc">
+                  <p>Typeface | Merriweather</p>
+                  <p>font-family | 'Merriweather', serif</p>
+                </div>
+              </div>
+              <div class="mt-4">
+                <div>
+                  <div class="d-flex flex-wrap justify-content-between">
+                    <p class="chart-text-example">(20, 67)</p>
+                    <p class="chart-text-example">x = 23</p>
+                    <p class="chart-text-example">$556k</p>
+                    <p class="chart-text-example">Feb</p>
+                    <p class="chart-text-example">72%</p>
+                  </div>
+                  <p>16px | normal | Merriweather</p>
+                  <hr />
+                </div>
+              </div>
+            </div>
+            <div class="content-text-container mb-5">
+              <h3 class="mb-4">Contents</h3>
+              <div class="d-flex gap-3">
+                <div class="font-preview">
+                  <div>Aa</div>
+                </div>
+                <div class="font-desc">
+                  <p>Typeface | Lato</p>
+                  <p>font-family | 'Lato', sans-serif</p>
+                </div>
+              </div>
+              <div class="mt-4">
+                <div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Curabitur ullamcorper quam vitae tellus pulvinar, non
+                    sagittis ligula bibendum. Fusce odio velit, porttitor sed
+                    maximus nec, lacinia quis justo. Integer ipsum libero,
+                    tincidunt quis nulla at, ullamcorper luctus nisl. Mauris sed
+                    pulvinar lacus, a convallis justo. Mauris ac sem odio. Ut ac
+                    commodo urna, vitae tempus purus. Ut hendrerit porttitor
+                    dapibus. Praesent ornare, turpis in luctus pharetra, lacus
+                    erat faucibus nulla, tempus vestibulum purus enim et nunc.
+                    Aenean ultricies ultricies cursus. Sed ut eleifend libero.
+                    Donec aliquam magna id velit dictum pharetra. Suspendisse
+                    elementum porttitor enim vitae convallis. Duis non est.
+                  </p>
+                  <p>16px | normal | Lato</p>
+                  <div></div>
+                  <hr />
+                </div>
+              </div>
+            </div>
+          </section>
 
-        <section id="styling-layout" class="layout-doc library-section">
-          <h2 class="section-heading">Styling & Layout</h2>
-          <section id="page-layouts">
-          <h3>3.1 Page Layouts</h3><p>The dashboard uses a single-page layout that presents key statistics first, followed by detailed visualizations. A consistent header and a simple content hierarchy help users locate information quickly.</p>
-          <div class="d-flex justify-content-center">
-            <figure><img class="w-100" src="images/page-layout.png" alt="Desktop dashboard with three KPI cards and six chart cards"><figcaption>Desktop Dashboard Layout</figcaption></figure>
-          </div>
-          <table><tr><th>Region</th><th>Purpose</th></tr><tr><td>Header</td><td>Command TV logo and dashboard title</td></tr><tr><td>Overview</td><td>Three single-value charts for key statistics</td></tr><tr><td>Data visualizations</td><td>Six multi-value charts arranged in cards</td></tr><tr><td>Footer</td><td>Brand information</td></tr></table>
-          <pre><code>
+          <section id="styling-layout" class="layout-doc library-section">
+            <h2 class="section-heading">Styling & Layout</h2>
+            <section id="page-layouts">
+              <h3>3.1 Page Layouts</h3>
+              <p>
+                The dashboard uses a single-page layout that presents key
+                statistics first, followed by detailed visualizations. A
+                consistent header and a simple content hierarchy help users
+                locate information quickly.
+              </p>
+              <div class="d-flex justify-content-center">
+                <figure>
+                  <img
+                    class="w-100"
+                    src="images/page-layout.png"
+                    alt="Desktop dashboard with three KPI cards and six chart cards"
+                  />
+                  <figcaption>Desktop Dashboard Layout</figcaption>
+                </figure>
+              </div>
+              <table>
+                <tr>
+                  <th>Region</th>
+                  <th>Purpose</th>
+                </tr>
+                <tr>
+                  <td>Header</td>
+                  <td>Command TV logo and dashboard title</td>
+                </tr>
+                <tr>
+                  <td>Overview</td>
+                  <td>Three single-value charts for key statistics</td>
+                </tr>
+                <tr>
+                  <td>Data visualizations</td>
+                  <td>Six multi-value charts arranged in cards</td>
+                </tr>
+                <tr>
+                  <td>Footer</td>
+                  <td>Brand information</td>
+                </tr>
+              </table>
+              <pre><code>
 &lt;header class=&quot;ctv-header&quot;&gt;
   &lt;span&gt;Command TV&lt;/span&gt;&lt;span&gt;Analytics Dashboard&lt;/span&gt;
 &lt;/header&gt;
@@ -313,14 +468,106 @@
 &lt;/main&gt;
 &lt;footer class=&quot;layout-demo-footer&quot;&gt;Command TV&lt;/footer&gt;
         </code></pre>
-        </section>
-        <section id="grid-configuration"><h3>3.2 Grid Configuration</h3><p>A 12-column CSS Grid provides a consistent alignment system. On desktop and tablet screens, each KPI occupies four columns and each detailed chart occupies six. Mobile cards span all 12 columns.</p><figure><img src="images/grid-configuration.png" alt="Twelve-column grid showing four-column KPI and six-column chart cards"><figcaption>12-Column Grid Layout</figcaption></figure><table><tr><th>Pattern</th><th>Columns</th><th>Spacing</th></tr><tr><td>KPI card</td><td>4 of 12</td><td>24 px desktop / 16 px smaller</td></tr><tr><td>Chart card</td><td>6 of 12</td><td>24 px desktop / 16 px smaller</td></tr><tr><td>Full-width card</td><td>12 of 12</td><td>Optional for wider charts</td></tr><tr><td>Card padding</td><td>—</td><td>16 px</td></tr><tr><td>Card radius</td><td>—</td><td>8 px</td></tr></table><p></p><h5>CSS pattern</h5><pre><code>.ctv-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; }
+            </section>
+            <section id="grid-configuration">
+              <h3>3.2 Grid Configuration</h3>
+              <p>
+                A 12-column CSS Grid provides a consistent alignment system. On
+                desktop and tablet screens, each KPI occupies four columns and
+                each detailed chart occupies six. Mobile cards span all 12
+                columns.
+              </p>
+              <figure>
+                <img
+                  src="images/grid-configuration.png"
+                  alt="Twelve-column grid showing four-column KPI and six-column chart cards"
+                />
+                <figcaption>12-Column Grid Layout</figcaption>
+              </figure>
+              <table>
+                <tr>
+                  <th>Pattern</th>
+                  <th>Columns</th>
+                  <th>Spacing</th>
+                </tr>
+                <tr>
+                  <td>KPI card</td>
+                  <td>4 of 12</td>
+                  <td>24 px desktop / 16 px smaller</td>
+                </tr>
+                <tr>
+                  <td>Chart card</td>
+                  <td>6 of 12</td>
+                  <td>24 px desktop / 16 px smaller</td>
+                </tr>
+                <tr>
+                  <td>Full-width card</td>
+                  <td>12 of 12</td>
+                  <td>Optional for wider charts</td>
+                </tr>
+                <tr>
+                  <td>Card padding</td>
+                  <td>—</td>
+                  <td>16 px</td>
+                </tr>
+                <tr>
+                  <td>Card radius</td>
+                  <td>—</td>
+                  <td>8 px</td>
+                </tr>
+              </table>
+              <p></p>
+              <h5>CSS pattern</h5>
+              <pre><code>.ctv-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; }
           .ctv-kpi { grid-column: span 4; }
           .ctv-chart { grid-column: span 6; }
           .ctv-full { grid-column: 1 / -1; }
           .ctv-card { min-width: 0; padding: 16px; border-radius: 8px; background: #fff; box-shadow: 0 2px 8px rgba(59, 17, 141, 0.12); }
-          </code></pre></section>
-          <section id="responsive-screen-sizes"><h3>3.3 Responsive Screen Sizes</h3><p>The layout adapts to the viewport rather than relying on fixed chart widths. Smaller screens stack cards vertically so that content remains readable without page-level horizontal scrolling.</p><figure><img src="images/responsive-layout.png" alt="Desktop, tablet and mobile dashboard layouts"><figcaption>Responsive Layout Patternscaption</figure><table><tr><th>Viewport</th><th>KPI per row</th><th>Charts per row</th><th>Gap</th></tr><tr><td>Desktop ≥ 1200 px</td><td>3</td><td>2</td><td>24 px</td></tr><tr><td>Tablet 768–1199 px</td><td>3</td><td>2</td><td>16 px</td></tr><tr><td>Mobile &lt; 768 px</td><td>1</td><td>1</td><td>16 px</td></tr></table><h5>CSS pattern</h5><pre><code>@media (max-width: 1199px) {
+          </code></pre>
+            </section>
+            <section id="responsive-screen-sizes">
+              <h3>3.3 Responsive Screen Sizes</h3>
+              <p>
+                The layout adapts to the viewport rather than relying on fixed
+                chart widths. Smaller screens stack cards vertically so that
+                content remains readable without page-level horizontal
+                scrolling.
+              </p>
+              <figure>
+                <img
+                  src="images/responsive-layout.png"
+                  alt="Desktop, tablet and mobile dashboard layouts"
+                />
+                <figcaption>Responsive Layout Patterns</figcaption>
+              </figure>
+              <table>
+                <tr>
+                  <th>Viewport</th>
+                  <th>KPI per row</th>
+                  <th>Charts per row</th>
+                  <th>Gap</th>
+                </tr>
+                <tr>
+                  <td>Desktop ≥ 1200 px</td>
+                  <td>3</td>
+                  <td>2</td>
+                  <td>24 px</td>
+                </tr>
+                <tr>
+                  <td>Tablet 768–1199 px</td>
+                  <td>3</td>
+                  <td>2</td>
+                  <td>16 px</td>
+                </tr>
+                <tr>
+                  <td>Mobile &lt; 768 px</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>16 px</td>
+                </tr>
+              </table>
+              <h5>CSS pattern</h5>
+              <pre><code>@media (max-width: 1199px) {
             .ctv-grid { gap: 16px; }
             .ctv-main { padding: 16px; }
           }
@@ -328,98 +575,288 @@
             .ctv-kpi, .ctv-chart { grid-column: 1 / -1; }
             .ctv-header { flex-wrap: wrap; }
           }
-          </code></pre></section>
-          
-          <section id="live-example"><h3>Live responsive example</h3><p>Resize the browser to preview the responsive layout. </p><div class="layout-demo"><header class="ctv-header">
-            <span>Command TV</span><span>Analytics Dashboard</span>
-          </header>
-          <div class="ctv-main" role="region" aria-label="Dashboard preview">
-            <section aria-labelledby="overview-title">
-              <h4 id="overview-title">Overview</h4>
-              <div class="ctv-grid">
-                <article class="ctv-card ctv-kpi">KPI 1</article>
-                <article class="ctv-card ctv-kpi">KPI 2</article>
-                <article class="ctv-card ctv-kpi">KPI 3</article>
-              </div>
+          </code></pre>
             </section>
-            <section aria-labelledby="charts-title">
-              <h4 id="charts-title">Data Visualizations</h4>
-              <div class="ctv-grid">
-                <article class="ctv-card ctv-chart">Chart 1</article>
-                <article class="ctv-card ctv-chart">Chart 2</article>
-                <article class="ctv-card ctv-chart">Chart 3</article>
-                <article class="ctv-card ctv-chart">Chart 4</article>
-                <article class="ctv-card ctv-chart">Chart 5</article>
-                <article class="ctv-card ctv-chart">Chart 6</article>
-              </div>
-            </section>
-          </div>
-          <h5 style="margin: 0 16px">Base CSS</h5><pre><code>/* Command TV – reusable layout patterns */
+
+            <section id="live-example">
+              <h3>Live responsive example</h3>
+              <p>Resize the browser to preview the responsive layout.</p>
+              <div class="layout-demo">
+                <header class="ctv-header">
+                  <span>Command TV</span><span>Analytics Dashboard</span>
+                </header>
+                <div
+                  class="ctv-main"
+                  role="region"
+                  aria-label="Dashboard preview"
+                >
+                  <section aria-labelledby="overview-title">
+                    <h4 id="overview-title">Overview</h4>
+                    <div class="ctv-grid">
+                      <article class="ctv-card ctv-kpi">KPI 1</article>
+                      <article class="ctv-card ctv-kpi">KPI 2</article>
+                      <article class="ctv-card ctv-kpi">KPI 3</article>
+                    </div>
+                  </section>
+                  <section aria-labelledby="charts-title">
+                    <h4 id="charts-title">Data Visualizations</h4>
+                    <div class="ctv-grid">
+                      <article class="ctv-card ctv-chart">Chart 1</article>
+                      <article class="ctv-card ctv-chart">Chart 2</article>
+                      <article class="ctv-card ctv-chart">Chart 3</article>
+                      <article class="ctv-card ctv-chart">Chart 4</article>
+                      <article class="ctv-card ctv-chart">Chart 5</article>
+                      <article class="ctv-card ctv-chart">Chart 6</article>
+                    </div>
+                  </section>
+                </div>
+                <h5 style="margin: 0 16px">Base CSS</h5>
+                <pre><code>/* Command TV – reusable layout patterns */
 .ctv-main, .ctv-main *, .ctv-header, .ctv-header * { box-sizing: border-box; }
 .ctv-main { max-width: 1440px; margin: auto; padding: 24px; }
 .ctv-main section + section { margin-top: 24px; }
 .ctv-header { display: flex; justify-content: space-between; gap: 16px; padding: 16px 24px; background: #E1C8F6; color: #3B118D; }
-</code></pre></section>
-        </section>
+</code></pre>
+              </div>
+            </section>
+          </section>
 
-        <section id="buttons" class="library-section">
-          <h2 class="section-heading">Buttons</h2>
-        </section>
-        <section id="form-inputs" class="library-section">
-          <h2 class="section-heading">Form Inputs</h2>
-        </section>
-        <section id="tables" class="library-section">
-          <h2 class="section-heading">Tables</h2>
-        </section>
-        <section id="icons" class="library-section">
-          <h2 class="section-heading">Icons</h2>
-        </section>
-        <section id="navigation-bar" class="library-section">
-          <h2 class="section-heading">Navigation Bar</h2>
-        </section>
-        <section id="data-brush" class="library-section">
-          <h2 class="section-heading">Data Brushing</h2>
-        </section>
-        <section id="line-graphs" class="library-section">
-          <h2 class="section-heading">Line Graphs</h2>
-        </section>
-        <section id="bar-graphs" class="library-section">
-          <h2 class="section-heading">Bar Graphs</h2>
-        </section>
-        <section id="single-value-charts" class="library-section">
-          <h2 class="section-heading">Single Value Charts</h2>
-        </section>
-        <section id="area-charts" class="library-section">
-          <h2 class="section-heading">Area Charts</h2>
-        </section>
-        <section id="scatter-plots" class="library-section">
-          <h2 class="section-heading">Scatter Plots</h2>
-        </section>
-        <section id="pie-charts" class="library-section">
-          <h2 class="section-heading">Pie Charts</h2>
-        </section>
-        <section id="donut-charts" class="library-section">
-          <h2 class="section-heading">Donut Charts</h2>
-        </section>
+          <section id="buttons" class="library-section">
+            <h2 class="section-heading">Buttons</h2>
+          </section>
+          <section id="form-inputs" class="library-section">
+            <h2 class="section-heading">Form Inputs</h2>
+          </section>
+          <section id="tables" class="library-section">
+            <h2 class="section-heading">Tables</h2>
+          </section>
+          <section id="icons" class="library-section">
+            <h2 class="section-heading">Icons</h2>
+          </section>
+          <section id="navigation-bar" class="library-section">
+            <h2 class="section-heading">Navigation Bar</h2>
+          </section>
+          <section id="data-brush" class="library-section">
+            <h2 class="section-heading">Data Brushing</h2>
+          </section>
+
+          <section id="line-graphs" class="library-section">
+            <h2 class="section-heading">Line Graphs</h2>
+            <div class="mb-5">
+              <h3 class="mb-4">Line Chart</h3>
+              <p>Shows changes in views over time.</p>
+              <figure class="mb-3">
+                <img
+                  class="img-fluid"
+                  src="images/line.png"
+                  alt="Line Chart example"
+                />
+                <figcaption>Example using sample data.</figcaption>
+              </figure>
+              <hr />
+            </div>
+            <div class="mb-5">
+              <h3 class="mb-4">Stacked Line Chart</h3>
+              <p>Shows cumulative views from two sources over time.</p>
+              <figure class="mb-3">
+                <img
+                  class="img-fluid"
+                  src="images/stacked-line.png"
+                  alt="Stacked Line Chart example"
+                />
+                <figcaption>Example using sample data.</figcaption>
+              </figure>
+              <hr />
+            </div>
+          </section>
+
+          <section id="bar-graphs" class="library-section">
+            <h2 class="section-heading">Bar Graphs</h2>
+            <div class="mb-5">
+              <h3 class="mb-4">Bar Chart</h3>
+              <p>Compares views across months.</p>
+              <figure class="mb-3">
+                <img
+                  class="img-fluid"
+                  src="images/bar.png"
+                  alt="Bar Chart example"
+                />
+                <figcaption>Example using sample data.</figcaption>
+              </figure>
+              <hr />
+            </div>
+            <div class="mb-5">
+              <h3 class="mb-4">Stacked Bar Chart</h3>
+              <p>Compares total views and the contribution of each source.</p>
+              <figure class="mb-3">
+                <img
+                  class="img-fluid"
+                  src="images/stacked-bar.png"
+                  alt="Stacked Bar Chart example"
+                />
+                <figcaption>Example using sample data.</figcaption>
+              </figure>
+              <hr />
+            </div>
+            <div class="mb-5">
+              <h3 class="mb-4">Horizontal Bar Chart</h3>
+              <p>Compares views across video categories.</p>
+              <figure class="mb-3">
+                <img
+                  class="img-fluid"
+                  src="images/horizontal-bar.png"
+                  alt="Horizontal Bar Chart example"
+                />
+                <figcaption>Example using sample data.</figcaption>
+              </figure>
+              <hr />
+            </div>
+          </section>
+
+          <section id="single-value-charts" class="library-section">
+            <h2 class="section-heading">Single Value Charts</h2>
+            <div class="mb-5">
+              <h3 class="mb-4">Total Views</h3>
+              <p>Displays the total number of video views.</p>
+              <figure class="mb-3">
+                <img
+                  class="img-fluid"
+                  src="images/total-views.png"
+                  alt="Total Views example"
+                />
+                <figcaption>Example using sample data.</figcaption>
+              </figure>
+              <hr />
+            </div>
+            <div class="mb-5">
+              <h3 class="mb-4">Total Videos</h3>
+              <p>Displays the total number of published videos.</p>
+              <figure class="mb-3">
+                <img
+                  class="img-fluid"
+                  src="images/total-videos.png"
+                  alt="Total Videos example"
+                />
+                <figcaption>Example using sample data.</figcaption>
+              </figure>
+              <hr />
+            </div>
+            <div class="mb-5">
+              <h3 class="mb-4">Average Watch Time</h3>
+              <p>Displays the average time viewers spend watching videos.</p>
+              <figure class="mb-3">
+                <img
+                  class="img-fluid"
+                  src="images/average-watch-time.png"
+                  alt="Average Watch Time example"
+                />
+                <figcaption>Example using sample data.</figcaption>
+              </figure>
+              <hr />
+            </div>
+          </section>
+
+          <section id="area-charts" class="library-section">
+            <h2 class="section-heading">Area Charts</h2>
+            <div class="mb-5">
+              <h3 class="mb-4">Area Chart</h3>
+              <p>Shows the volume of views over time.</p>
+              <figure class="mb-3">
+                <img
+                  class="img-fluid"
+                  src="images/area.png"
+                  alt="Area Chart example"
+                />
+                <figcaption>Example using sample data.</figcaption>
+              </figure>
+              <hr />
+            </div>
+            <div class="mb-5">
+              <h3 class="mb-4">Stacked Area Chart</h3>
+              <p>Shows how sources contribute to total views over time.</p>
+              <figure class="mb-3">
+                <img
+                  class="img-fluid"
+                  src="images/stacked-area.png"
+                  alt="Stacked Area Chart example"
+                />
+                <figcaption>Example using sample data.</figcaption>
+              </figure>
+              <hr />
+            </div>
+          </section>
+
+          <section id="scatter-plots" class="library-section">
+            <h2 class="section-heading">Scatter Plots</h2>
+            <div class="mb-5">
+              <h3 class="mb-4">Scatter Plot</h3>
+              <p>Shows the relationship between video duration and views.</p>
+              <figure class="mb-3">
+                <img
+                  class="img-fluid"
+                  src="images/scatter.png"
+                  alt="Scatter Plot example"
+                />
+                <figcaption>Example using sample data.</figcaption>
+              </figure>
+              <hr />
+            </div>
+          </section>
+
+          <section id="pie-charts" class="library-section">
+            <h2 class="section-heading">Pie Charts</h2>
+            <div class="mb-5">
+              <h3 class="mb-4">Pie Chart</h3>
+              <p>
+                Shows the proportion of total views across video categories.
+              </p>
+              <figure class="mb-3">
+                <img
+                  class="img-fluid"
+                  src="images/pie.png"
+                  alt="Pie Chart example"
+                />
+                <figcaption>Example using sample data.</figcaption>
+              </figure>
+              <hr />
+            </div>
+          </section>
+
+          <section id="donut-charts" class="library-section">
+            <h2 class="section-heading">Donut Charts</h2>
+            <div class="mb-5">
+              <h3 class="mb-4">Donut Chart</h3>
+              <p>Shows the distribution of views across different sources.</p>
+              <figure class="mb-3">
+                <img
+                  class="img-fluid"
+                  src="images/donut.png"
+                  alt="Donut Chart example"
+                />
+                <figcaption>Example using sample data.</figcaption>
+              </figure>
+              <hr />
+            </div>
+          </section>
+        </div>
       </div>
-    </div>
-  </main>
-  <footer>
+    </main>
+    <footer></footer>
 
-  </footer>
-
-  <script>
-    document.querySelectorAll('.nav-btn').forEach(link => {
-      link.addEventListener('click', function(event) {
-        const currentSelection = document.querySelector('.nav-btn.active');
-        if(currentSelection) {
-          currentSelection.classList.remove('active');
-          document.getElementById(currentSelection.id.slice(4)).classList.remove('active');
-        }
-        this.classList.add('active');
-        document.getElementById(this.id.slice(4)).classList.add('active');
+    <script>
+      document.querySelectorAll(".nav-btn").forEach((link) => {
+        link.addEventListener("click", function (event) {
+          const currentSelection = document.querySelector(".nav-btn.active");
+          if (currentSelection) {
+            currentSelection.classList.remove("active");
+            document
+              .getElementById(currentSelection.id.slice(4))
+              .classList.remove("active");
+          }
+          this.classList.add("active");
+          document.getElementById(this.id.slice(4)).classList.add("active");
+        });
       });
-    });
-  </script>
+    </script>
   </body>
 </html>
