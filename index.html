@@ -379,16 +379,16 @@
                 <div>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Curabitur ullamcorper quam vitae tellus pulvinar, non
-                    sagittis ligula bibendum. Fusce odio velit, porttitor sed
-                    maximus nec, lacinia quis justo. Integer ipsum libero,
-                    tincidunt quis nulla at, ullamcorper luctus nisl. Mauris sed
-                    pulvinar lacus, a convallis justo. Mauris ac sem odio. Ut ac
-                    commodo urna, vitae tempus purus. Ut hendrerit porttitor
-                    dapibus. Praesent ornare, turpis in luctus pharetra, lacus
-                    erat faucibus nulla, tempus vestibulum purus enim et nunc.
-                    Aenean ultricies ultricies cursus. Sed ut eleifend libero.
-                    Donec aliquam magna id velit dictum pharetra. Suspendisse
+                    Curabitur gravida quam vitae tellus pulvinar, non sagittis
+                    ligula bibendum. Fusce odio velit, porttitor sed maximus
+                    nec, iaculis quis justo. Integer ipsum libero, tincidunt
+                    quis nulla at, ullamcorper luctus nisl. Mauris sed lacus, a
+                    convallis justo. Mauris ac sem odio. Ut ac commodo urna,
+                    vitae tempus purus. Ut hendrerit porttitor blandit. Praesent
+                    ornare, turpis in luctus pharetra, lacus erat faucibus
+                    nulla, tempus vestibulum purus enim et nunc. Aenean
+                    ultricies ultricies cursus. Sed ut eleifend libero. Donec
+                    aliquam magna id velit dictum pharetra. Suspendisse
                     elementum porttitor enim vitae convallis. Duis non est.
                   </p>
                   <p>16px | normal | Lato</p>
@@ -455,7 +455,10 @@
     &lt;/div&gt;
   &lt;/section&gt;
   &lt;section aria-labelledby=&quot;charts-title&quot;&gt;
-    &lt;h2 id=&quot;charts-title&quot;&gt;Data Visualizations&lt;/h2&gt;
+    &lt;div class=&quot;ctv-section-header&quot;&gt;
+      &lt;h2 id=&quot;charts-title&quot;&gt;Data Visualizations&lt;/h2&gt;
+      &lt;button type=&quot;button&quot; class=&quot;ctv-filter-btn&quot;&gt;Filter Data&lt;/button&gt;
+    &lt;/div&gt;
     &lt;div class=&quot;ctv-grid&quot;&gt;
       &lt;article class=&quot;ctv-card ctv-chart&quot;&gt;Chart 1&lt;/article&gt;
       &lt;article class=&quot;ctv-card ctv-chart&quot;&gt;Chart 2&lt;/article&gt;
@@ -467,7 +470,7 @@
   &lt;/section&gt;
 &lt;/main&gt;
 &lt;footer class=&quot;layout-demo-footer&quot;&gt;Command TV&lt;/footer&gt;
-        </code></pre>
+              </code></pre>
             </section>
             <section id="grid-configuration">
               <h3>3.2 Grid Configuration</h3>
@@ -518,12 +521,23 @@
               </table>
               <p></p>
               <h5>CSS pattern</h5>
-              <pre><code>.ctv-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; }
-          .ctv-kpi { grid-column: span 4; }
-          .ctv-chart { grid-column: span 6; }
-          .ctv-full { grid-column: 1 / -1; }
-          .ctv-card { min-width: 0; padding: 16px; border-radius: 8px; background: #fff; box-shadow: 0 2px 8px rgba(59, 17, 141, 0.12); }
-          </code></pre>
+              <pre><code>
+.ctv-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; }
+.ctv-kpi { grid-column: span 4; }
+.ctv-chart { grid-column: span 6; }
+.ctv-full { grid-column: 1 / -1; }
+.ctv-card { min-width: 0; padding: 16px; border-radius: 8px; background: #fff; color: #11268D; box-shadow: 0 2px 8px rgba(59, 17, 141, 0.12); }
+
+/* KPI background colours */
+.ctv-kpi:nth-child(1) { background: #CBE1F6; }
+.ctv-kpi:nth-child(2) { background: #CBCBF6; }
+.ctv-kpi:nth-child(3) { background: #E1CBF6; }
+
+/* Chart accent colours */
+.ctv-chart:nth-child(3n+1) { border-left: 5px solid #3B118D; }
+.ctv-chart:nth-child(3n+2) { border-left: 5px solid #B21665; }
+.ctv-chart:nth-child(3n) { border-left: 5px solid #78118D; }
+              </code></pre>
             </section>
             <section id="responsive-screen-sizes">
               <h3>3.3 Responsive Screen Sizes</h3>
@@ -568,57 +582,49 @@
               </table>
               <h5>CSS pattern</h5>
               <pre><code>@media (max-width: 1199px) {
-            .ctv-grid { gap: 16px; }
-            .ctv-main { padding: 16px; }
-          }
-          @media (max-width: 767px) {
-            .ctv-kpi, .ctv-chart { grid-column: 1 / -1; }
-            .ctv-header { flex-wrap: wrap; }
-          }
+  .ctv-grid { gap: 16px; }
+  .ctv-main { padding: 16px; }
+}
+@media (max-width: 767px) {
+  .ctv-kpi, .ctv-chart { grid-column: 1 / -1; }
+  .ctv-header { flex-wrap: wrap; }
+}
           </code></pre>
             </section>
 
+            <!-- Updated: Live responsive example -->
             <section id="live-example">
               <h3>Live responsive example</h3>
-              <p>Resize the browser to preview the responsive layout.</p>
-              <div class="layout-demo">
-                <header class="ctv-header">
-                  <span>Command TV</span><span>Analytics Dashboard</span>
-                </header>
-                <div
-                  class="ctv-main"
-                  role="region"
-                  aria-label="Dashboard preview"
-                >
-                  <section aria-labelledby="overview-title">
-                    <h4 id="overview-title">Overview</h4>
-                    <div class="ctv-grid">
-                      <article class="ctv-card ctv-kpi">KPI 1</article>
-                      <article class="ctv-card ctv-kpi">KPI 2</article>
-                      <article class="ctv-card ctv-kpi">KPI 3</article>
-                    </div>
-                  </section>
-                  <section aria-labelledby="charts-title">
-                    <h4 id="charts-title">Data Visualizations</h4>
-                    <div class="ctv-grid">
-                      <article class="ctv-card ctv-chart">Chart 1</article>
-                      <article class="ctv-card ctv-chart">Chart 2</article>
-                      <article class="ctv-card ctv-chart">Chart 3</article>
-                      <article class="ctv-card ctv-chart">Chart 4</article>
-                      <article class="ctv-card ctv-chart">Chart 5</article>
-                      <article class="ctv-card ctv-chart">Chart 6</article>
-                    </div>
-                  </section>
-                </div>
-                <h5 style="margin: 0 16px">Base CSS</h5>
-                <pre><code>/* Command TV – reusable layout patterns */
+              <p>This example shows the responsive dashboard layout.</p>
+
+              <figure>
+                <img
+                  src="images/live-responsive-example.png"
+                  alt="Live responsive dashboard layout"
+                />
+                <figcaption>Live Responsive Dashboard Layout</figcaption>
+              </figure>
+
+              <h5>Base CSS</h5>
+              <pre><code>/* Command TV – reusable layout patterns */
 .ctv-main, .ctv-main *, .ctv-header, .ctv-header * { box-sizing: border-box; }
-.ctv-main { max-width: 1440px; margin: auto; padding: 24px; }
+.ctv-main { max-width: 1440px; margin: auto; padding: 24px; background: #FEFAFB; color: #11268D; }
 .ctv-main section + section { margin-top: 24px; }
-.ctv-header { display: flex; justify-content: space-between; gap: 16px; padding: 16px 24px; background: #E1C8F6; color: #3B118D; }
+
+/* Header */
+.ctv-header { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 24px; background: #3B118D; color: #FEFAFB; }
+
+/* Chart section heading */
+.ctv-section-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+
+/* Filter button */
+.ctv-filter-btn { padding: 8px 16px; border: none; border-radius: 8px; background: #B21665; color: #FEFAFB; cursor: pointer; }
+
+/* Footer */
+.layout-demo-footer { padding: 16px 24px; background: #E1CBF6; color: #11268D; text-align: center; }
 </code></pre>
-              </div>
             </section>
+            <!-- End of updated section -->
           </section>
 
           <section id="buttons" class="library-section">
