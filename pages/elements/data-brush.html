@@ -1,0 +1,99 @@
+<section id="data-brush" class="library-section ctv-elements">
+  <h2 class="section-heading">Data Brushing</h2>
+
+  <h3>Brush Selection</h3>
+  <p>
+    Data brushing allows users to select a specific region of a chart. Selected
+    data points are highlighted while unselected data points are visually
+    de-emphasized.
+  </p>
+
+  <div class="ctv-element-demo">
+    <figure class="ctv-element-figure">
+      <img
+        src="images/data-brush.png"
+        alt="Bar chart highlighting selected data within a brush area"
+      />
+      <figcaption>Data Brushing and Selection Pattern</figcaption>
+    </figure>
+  </div>
+
+  <h3>Brush States</h3>
+
+  <div class="ctv-table-wrapper">
+    <table class="ctv-data-table">
+      <thead>
+        <tr>
+          <th scope="col">State</th>
+          <th scope="col">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Default</td>
+          <td>All data points are displayed normally.</td>
+        </tr>
+        <tr>
+          <td>Selection</td>
+          <td>A translucent rectangle identifies the selected area.</td>
+        </tr>
+        <tr>
+          <td>Highlight</td>
+          <td>Selected data uses the brand purple colour.</td>
+        </tr>
+        <tr>
+          <td>Unselected</td>
+          <td>Data outside the selected area uses reduced opacity.</td>
+        </tr>
+        <tr>
+          <td>Reset</td>
+          <td>Clearing the brush restores the original chart.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Brush Styling</h3>
+
+  <ul>
+    <li>Selected Data: Brand purple (#3B118D).</li>
+    <li>Unselected Data: Brand purple with 25% opacity.</li>
+    <li>Brush Area: Pastel purple (#E1CBF6).</li>
+    <li>Selection Border: Brand magenta (#B21665).</li>
+  </ul>
+
+  <h5>HTML Pattern</h5>
+  <pre><code>&lt;svg viewBox="0 0 600 300"&gt;
+  &lt;rect class="ctv-brush-selection"
+        x="215" y="30" width="250" height="210" /&gt;
+
+  &lt;rect class="ctv-brush-selected"
+        x="245" y="70" width="45" height="170" /&gt;
+
+  &lt;rect class="ctv-brush-unselected"
+        x="85" y="150" width="45" height="90" /&gt;
+&lt;/svg&gt;</code></pre>
+
+  <h5>CSS Pattern</h5>
+  <pre><code>.ctv-brush-selection {
+  fill: #E1CBF6;
+  fill-opacity: 0.5;
+  stroke: #B21665;
+  stroke-width: 2;
+  stroke-dasharray: 5 3;
+}
+
+.ctv-brush-selected {
+  fill: #3B118D;
+}
+
+.ctv-brush-unselected {
+  fill: #3B118D;
+  opacity: 0.25;
+}</code></pre>
+
+  <p>
+    This example demonstrates the visual design of data brushing. Interactive
+    brushing will be implemented using D3.js in Project 2.
+  </p>
+</section>

@@ -1,0 +1,72 @@
+<section id="buttons" class="library-section ctv-elements">
+  <h2 class="section-heading">Buttons</h2>
+
+  <h3>Primary Button</h3>
+  <p>Used for primary actions such as applying filters or updating charts.</p>
+
+  <div class="ctv-element-demo">
+    <button type="button" class="ctv-btn-primary">Filter Data</button>
+    <button type="button" class="ctv-btn-primary">Apply</button>
+  </div>
+
+  <h5>HTML Pattern</h5>
+  <pre><code>&lt;button class="ctv-btn-primary"&gt;Filter Data&lt;/button&gt;
+&lt;button class="ctv-btn-primary"&gt;Apply&lt;/button&gt;</code></pre>
+
+  <hr />
+
+  <h3>Secondary Button</h3>
+  <p>
+    Used for secondary actions such as resetting filters or cancelling changes.
+  </p>
+
+  <div class="ctv-element-demo">
+    <button type="button" class="ctv-btn-secondary">Reset</button>
+    <button type="button" class="ctv-btn-secondary">Cancel</button>
+  </div>
+
+  <h5>HTML Pattern</h5>
+  <pre><code>&lt;button class="ctv-btn-secondary"&gt;Reset&lt;/button&gt;
+&lt;button class="ctv-btn-secondary"&gt;Cancel&lt;/button&gt;</code></pre>
+
+  <hr />
+
+  <h3>Disabled Button</h3>
+  <p>Used when an action is temporarily unavailable.</p>
+
+  <div class="ctv-element-demo">
+    <button type="button" class="ctv-btn-primary" disabled>Download</button>
+  </div>
+
+  <h5>HTML Pattern</h5>
+  <pre><code>&lt;button class="ctv-btn-primary" disabled&gt;Download&lt;/button&gt;</code></pre>
+
+  <h5>CSS Pattern</h5>
+  <pre><code>.ctv-btn-primary {
+  background: #B21665;
+  color: #FEFAFB;
+  border: 1px solid #B21665;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.ctv-btn-primary:hover:not(:disabled) {
+  background: #78118D;
+  border-color: #78118D;
+}
+
+.ctv-btn-secondary {
+  background: transparent;
+  color: #B21665;
+  border: 1px solid #B21665;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.ctv-btn-primary:disabled {
+  background: #D9D9D9;
+  color: #777777;
+  border-color: #D9D9D9;
+  cursor: not-allowed;
+}</code></pre>
+</section>

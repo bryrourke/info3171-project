@@ -1,0 +1,412 @@
+/* ========================================
+   Elements - Common Styles
+   ======================================== */
+
+.ctv-elements {
+  color: #11268D;
+  font-family: "Lato", sans-serif;
+}
+
+.ctv-elements * {
+  box-sizing: border-box;
+}
+
+.ctv-elements h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.ctv-elements h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.ctv-elements p,
+.ctv-elements li {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.ctv-elements hr {
+  margin: 32px 0;
+  border-color: #CBCBF6;
+}
+
+.ctv-elements .ctv-element-demo {
+  padding: 24px;
+  margin: 20px 0;
+  background: #FEFAFB;
+  border: 1px solid #CBCBF6;
+  border-radius: 8px;
+}
+
+.ctv-elements pre {
+  padding: 16px;
+  background: #f7f5fa;
+  color: #31264a;
+  border-radius: 8px;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+
+
+/* ========================================
+   1. Buttons
+   ======================================== */
+
+.ctv-elements .ctv-btn-primary,
+.ctv-elements .ctv-btn-secondary {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  padding: 8px 16px;
+  border: 1px solid #B21665;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.ctv-elements .ctv-btn-primary {
+  background: #B21665;
+  color: #FEFAFB;
+}
+
+.ctv-elements .ctv-btn-primary:hover:not(:disabled) {
+  background: #78118D;
+  border-color: #78118D;
+}
+
+.ctv-elements .ctv-btn-secondary {
+  background: transparent;
+  color: #B21665;
+}
+
+.ctv-elements .ctv-btn-secondary:hover:not(:disabled) {
+  background: #E1CBF6;
+}
+
+.ctv-elements .ctv-btn-primary:disabled,
+.ctv-elements .ctv-btn-secondary:disabled {
+  background: #D9D9D9;
+  color: #777777;
+  border-color: #D9D9D9;
+  cursor: not-allowed;
+}
+
+.ctv-elements button:focus-visible {
+  outline: 2px solid #11268D;
+  outline-offset: 3px;
+}
+
+
+/* ========================================
+   2. Form Inputs
+   ======================================== */
+
+.ctv-elements .ctv-input {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  padding: 10px 12px;
+  margin-top: 8px;
+  border: 1px solid #11268D;
+  border-radius: 8px;
+  background: #FEFAFB;
+  color: #11268D;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+
+.ctv-elements .ctv-input:focus {
+  outline: 2px solid #B21665;
+  outline-offset: 2px;
+}
+
+.ctv-elements label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.ctv-elements input[type="radio"],
+.ctv-elements input[type="checkbox"] {
+  accent-color: #B21665;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.ctv-elements .ctv-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ctv-elements .ctv-fieldset legend {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.ctv-elements .ctv-fieldset label {
+  display: inline-flex;
+  align-items: center;
+  margin: 6px 20px 6px 0;
+  cursor: pointer;
+}
+
+
+/* ========================================
+   3. Tables
+   ======================================== */
+
+.ctv-elements .ctv-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.ctv-elements .ctv-data-table {
+  width: 100%;
+  min-width: 420px;
+  border-collapse: collapse;
+  background: #FFFFFF;
+  color: #11268D;
+  font-family: "Lato", sans-serif;
+}
+
+.ctv-elements .ctv-data-table caption {
+  caption-side: top;
+  color: #11268D;
+  font-weight: 700;
+  padding: 8px 0 16px;
+}
+
+.ctv-elements .ctv-data-table th,
+.ctv-elements .ctv-data-table td {
+  padding: 12px;
+  border-bottom: 1px solid #CBCBF6;
+  text-align: left;
+}
+
+.ctv-elements .ctv-data-table th {
+  background: #E1CBF6;
+  font-weight: 700;
+}
+
+.ctv-elements .ctv-data-table tbody tr:nth-child(even) {
+  background: #FEFAFB;
+}
+
+.ctv-elements .ctv-data-table tbody tr:hover {
+  background: #CBE1F6;
+}
+
+
+/* ========================================
+   4. Icons
+   ======================================== */
+
+.ctv-elements .ctv-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.ctv-elements .ctv-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px 12px;
+  background: #FFFFFF;
+  border: 1px solid #CBCBF6;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.ctv-elements .ctv-icon {
+  width: 24px;
+  height: 24px;
+  color: #11268D;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ctv-elements .ctv-icon:hover {
+  color: #B21665;
+}
+
+.ctv-elements .ctv-icon-item span {
+  font-size: 14px;
+}
+
+
+/* ========================================
+   5. Navigation Bar
+   ======================================== */
+
+.ctv-elements .ctv-nav-example {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+  background: #E1CBF6;
+  border-radius: 8px;
+}
+
+.ctv-elements .ctv-nav-item {
+  padding: 10px 16px;
+  background: #FEFAFB;
+  color: #11268D;
+  border: none;
+  border-radius: 6px;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.ctv-elements .ctv-nav-active {
+  background: #CBE1F6;
+  font-weight: 700;
+}
+
+.ctv-elements .ctv-nav-item:hover,
+.ctv-elements .ctv-nav-hover {
+  background: #CBCBF6;
+}
+
+.ctv-elements .ctv-nav-states {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  text-align: center;
+}
+
+.ctv-elements .ctv-nav-states p {
+  font-size: 14px;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+
+/* ========================================
+   6. Data Brushing
+   ======================================== */
+
+.ctv-elements .ctv-brush-chart {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 20px auto;
+  font-family: "Merriweather", serif;
+}
+
+.ctv-elements .ctv-brush-selection {
+  fill: #E1CBF6;
+  fill-opacity: 0.5;
+  stroke: #B21665;
+  stroke-width: 2;
+  stroke-dasharray: 5 3;
+}
+
+.ctv-elements .ctv-brush-selected {
+  fill: #3B118D;
+}
+
+.ctv-elements .ctv-brush-unselected {
+  fill: #3B118D;
+  opacity: 0.25;
+}
+
+.ctv-elements .ctv-brush-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.ctv-elements .ctv-brush-legend > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.ctv-elements .ctv-legend-selected,
+.ctv-elements .ctv-legend-unselected,
+.ctv-elements .ctv-legend-brush {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+}
+
+.ctv-elements .ctv-legend-selected {
+  background: #3B118D;
+}
+
+.ctv-elements .ctv-legend-unselected {
+  background: #3B118D;
+  opacity: 0.25;
+}
+
+.ctv-elements .ctv-legend-brush {
+  background: #E1CBF6;
+  border: 1px dashed #B21665;
+}
+
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 1199px) {
+  .ctv-elements .ctv-icon-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ctv-elements .ctv-element-demo {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ctv-elements .ctv-icon-grid,
+  .ctv-elements .ctv-nav-states {
+    grid-template-columns: 1fr;
+  }
+
+  .ctv-elements .ctv-nav-example {
+    flex-direction: column;
+  }
+
+  .ctv-elements .ctv-fieldset label {
+    display: flex;
+    margin-bottom: 12px;
+  }
+
+  .ctv-elements .ctv-input {
+    max-width: 100%;
+  }
+
+  .ctv-elements .ctv-data-table th,
+  .ctv-elements .ctv-data-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .ctv-elements .ctv-brush-legend {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+}

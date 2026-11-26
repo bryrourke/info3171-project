@@ -1,0 +1,134 @@
+<section id="form-inputs" class="library-section ctv-elements">
+  <h2 class="section-heading">Form Inputs</h2>
+
+  <h3>Text Input</h3>
+  <p>Allows users to search or filter dashboard data by entering text.</p>
+
+  <div class="ctv-element-demo">
+    <label for="video-search">Search Videos</label>
+    <input
+      type="text"
+      id="video-search"
+      class="ctv-input"
+      placeholder="Enter video title"
+    />
+  </div>
+
+  <h5>HTML Pattern</h5>
+  <pre><code>&lt;label for="video-search"&gt;Search Videos&lt;/label&gt;
+&lt;input type="text" id="video-search"
+       class="ctv-input" placeholder="Enter video title" /&gt;</code></pre>
+
+  <hr />
+
+  <h3>Dropdown</h3>
+  <p>Allows users to select a category or time period to update chart data.</p>
+
+  <div class="ctv-element-demo">
+    <label for="time-period">Time Period</label>
+    <select id="time-period" class="ctv-input">
+      <option>All Time</option>
+      <option>Last 7 Days</option>
+      <option>Last 30 Days</option>
+      <option>Last 90 Days</option>
+    </select>
+  </div>
+
+  <h5>HTML Pattern</h5>
+  <pre><code>&lt;select class="ctv-input"&gt;
+  &lt;option&gt;All Time&lt;/option&gt;
+  &lt;option&gt;Last 7 Days&lt;/option&gt;
+  &lt;option&gt;Last 30 Days&lt;/option&gt;
+  &lt;option&gt;Last 90 Days&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+
+  <hr />
+
+  <h3>Radio Buttons</h3>
+  <p>Allows users to select one chart style from multiple options.</p>
+
+  <div class="ctv-element-demo">
+    <fieldset class="ctv-fieldset">
+      <legend>Chart Style</legend>
+
+      <label>
+        <input type="radio" name="chart-style" value="default" checked />
+        Default
+      </label>
+
+      <label>
+        <input type="radio" name="chart-style" value="alternate" />
+        Alternate
+      </label>
+    </fieldset>
+  </div>
+
+  <h5>HTML Pattern</h5>
+  <pre><code>&lt;label&gt;
+  &lt;input type="radio" name="chart-style" value="default" checked /&gt;
+  Default
+&lt;/label&gt;
+
+&lt;label&gt;
+  &lt;input type="radio" name="chart-style" value="alternate" /&gt;
+  Alternate
+&lt;/label&gt;</code></pre>
+
+  <hr />
+
+  <h3>Checkboxes</h3>
+  <p>Allows users to enable or disable multiple chart display options.</p>
+
+  <div class="ctv-element-demo">
+    <fieldset class="ctv-fieldset">
+      <legend>Display Options</legend>
+
+      <label>
+        <input type="checkbox" checked />
+        Show Labels
+      </label>
+
+      <label>
+        <input type="checkbox" checked />
+        Show Legend
+      </label>
+
+      <label>
+        <input type="checkbox" />
+        Show Grid Lines
+      </label>
+    </fieldset>
+  </div>
+
+  <h5>HTML Pattern</h5>
+  <pre><code>&lt;label&gt;
+  &lt;input type="checkbox" checked /&gt; Show Labels
+&lt;/label&gt;
+
+&lt;label&gt;
+  &lt;input type="checkbox" checked /&gt; Show Legend
+&lt;/label&gt;
+
+&lt;label&gt;
+  &lt;input type="checkbox" /&gt; Show Grid Lines
+&lt;/label&gt;</code></pre>
+
+  <h5>CSS Pattern</h5>
+  <pre><code>.ctv-input {
+  padding: 10px 12px;
+  border: 1px solid #11268D;
+  border-radius: 8px;
+  background: #FEFAFB;
+  color: #11268D;
+}
+
+.ctv-input:focus {
+  outline: 2px solid #B21665;
+  outline-offset: 2px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: #B21665;
+}</code></pre>
+</section>

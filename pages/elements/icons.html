@@ -1,0 +1,91 @@
+<section id="icons" class="library-section ctv-elements">
+  <h2 class="section-heading">Icons</h2>
+
+  <h3>Dashboard Icons</h3>
+  <p>
+    Icons provide visual indicators for common dashboard actions. They should be
+    simple, consistent, and easy to recognize.
+  </p>
+
+  <div class="ctv-element-demo">
+    <figure class="ctv-element-figure">
+      <img
+        src="images/dashboard-icons.png"
+        alt="Search, Filter, Zoom In, Zoom Out, Reset, and Download icons"
+      />
+      <figcaption>Dashboard Icon Patterns</figcaption>
+    </figure>
+  </div>
+
+  <h3>Icon Usage</h3>
+
+  <div class="ctv-table-wrapper">
+    <table class="ctv-data-table">
+      <thead>
+        <tr>
+          <th scope="col">Icon</th>
+          <th scope="col">Usage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Search</td>
+          <td>Find specific data.</td>
+        </tr>
+        <tr>
+          <td>Filter</td>
+          <td>Filter chart data.</td>
+        </tr>
+        <tr>
+          <td>Zoom In</td>
+          <td>Explore chart details.</td>
+        </tr>
+        <tr>
+          <td>Zoom Out</td>
+          <td>Reduce chart scale.</td>
+        </tr>
+        <tr>
+          <td>Reset</td>
+          <td>Restore default settings.</td>
+        </tr>
+        <tr>
+          <td>Download</td>
+          <td>Export dashboard data.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Icon Guidelines</h3>
+
+  <ul>
+    <li>Default icon size: 24 × 24 pixels.</li>
+    <li>Default icon colour: #11268D.</li>
+    <li>Action icon colour: #B21665.</li>
+    <li>Use consistent stroke widths.</li>
+    <li>Provide accessible labels for icon-only buttons.</li>
+  </ul>
+
+  <h5>HTML Pattern</h5>
+  <pre><code>&lt;button type="button" aria-label="Search"&gt;
+  &lt;svg class="ctv-icon" viewBox="0 0 24 24"
+       fill="none" stroke="currentColor" stroke-width="2"
+       aria-hidden="true"&gt;
+    &lt;circle cx="10" cy="10" r="6" /&gt;
+    &lt;path d="M14.5 14.5L21 21" /&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;</code></pre>
+
+  <h5>CSS Pattern</h5>
+  <pre><code>.ctv-icon {
+  width: 24px;
+  height: 24px;
+  color: #11268D;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ctv-icon:hover {
+  color: #B21665;
+}</code></pre>
+</section>

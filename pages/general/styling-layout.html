@@ -1,0 +1,227 @@
+<section id="styling-layout" class="layout-doc library-section">
+            <h2 class="section-heading">Styling & Layout</h2>
+            <section id="page-layouts">
+              <h3>3.1 Page Layouts</h3>
+              <p>
+                The dashboard uses a single-page layout that presents key
+                statistics first, followed by detailed visualizations. A
+                consistent header and a simple content hierarchy help users
+                locate information quickly.
+              </p>
+              <div class="d-flex justify-content-center">
+                <figure>
+                  <img
+                    class="w-100"
+                    src="images/page-layout.png"
+                    alt="Desktop dashboard with three KPI cards and six chart cards"
+                  />
+                  <figcaption>Desktop Dashboard Layout</figcaption>
+                </figure>
+              </div>
+              <table>
+                <tr>
+                  <th>Region</th>
+                  <th>Purpose</th>
+                </tr>
+                <tr>
+                  <td>Header</td>
+                  <td>Command TV logo and dashboard title</td>
+                </tr>
+                <tr>
+                  <td>Overview</td>
+                  <td>Three single-value charts for key statistics</td>
+                </tr>
+                <tr>
+                  <td>Data visualizations</td>
+                  <td>Six multi-value charts arranged in cards</td>
+                </tr>
+                <tr>
+                  <td>Footer</td>
+                  <td>Brand information</td>
+                </tr>
+              </table>
+              <pre><code>
+&lt;header class=&quot;ctv-header&quot;&gt;
+  &lt;span&gt;Command TV&lt;/span&gt;&lt;span&gt;Analytics Dashboard&lt;/span&gt;
+&lt;/header&gt;
+&lt;main class=&quot;ctv-main&quot;&gt;
+  &lt;section aria-labelledby=&quot;overview-title&quot;&gt;
+    &lt;h2 id=&quot;overview-title&quot;&gt;Overview&lt;/h2&gt;
+    &lt;div class=&quot;ctv-grid&quot;&gt;
+      &lt;article class=&quot;ctv-card ctv-kpi&quot;&gt;KPI 1&lt;/article&gt;
+      &lt;article class=&quot;ctv-card ctv-kpi&quot;&gt;KPI 2&lt;/article&gt;
+      &lt;article class=&quot;ctv-card ctv-kpi&quot;&gt;KPI 3&lt;/article&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;section aria-labelledby=&quot;charts-title&quot;&gt;
+    &lt;div class=&quot;ctv-section-header&quot;&gt;
+      &lt;h2 id=&quot;charts-title&quot;&gt;Data Visualizations&lt;/h2&gt;
+      &lt;button type=&quot;button&quot; class=&quot;ctv-filter-btn&quot;&gt;Filter Data&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ctv-grid&quot;&gt;
+      &lt;article class=&quot;ctv-card ctv-chart&quot;&gt;Chart 1&lt;/article&gt;
+      &lt;article class=&quot;ctv-card ctv-chart&quot;&gt;Chart 2&lt;/article&gt;
+      &lt;article class=&quot;ctv-card ctv-chart&quot;&gt;Chart 3&lt;/article&gt;
+      &lt;article class=&quot;ctv-card ctv-chart&quot;&gt;Chart 4&lt;/article&gt;
+      &lt;article class=&quot;ctv-card ctv-chart&quot;&gt;Chart 5&lt;/article&gt;
+      &lt;article class=&quot;ctv-card ctv-chart&quot;&gt;Chart 6&lt;/article&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+&lt;footer class=&quot;layout-demo-footer&quot;&gt;Command TV&lt;/footer&gt;
+              </code></pre>
+            </section>
+            <section id="grid-configuration">
+              <h3>3.2 Grid Configuration</h3>
+              <p>
+                A 12-column CSS Grid provides a consistent alignment system. On
+                desktop and tablet screens, each KPI occupies four columns and
+                each detailed chart occupies six. Mobile cards span all 12
+                columns.
+              </p>
+              <figure>
+                <img
+                  src="images/grid-configuration.png"
+                  alt="Twelve-column grid showing four-column KPI and six-column chart cards"
+                />
+                <figcaption>12-Column Grid Layout</figcaption>
+              </figure>
+              <table>
+                <tr>
+                  <th>Pattern</th>
+                  <th>Columns</th>
+                  <th>Spacing</th>
+                </tr>
+                <tr>
+                  <td>KPI card</td>
+                  <td>4 of 12</td>
+                  <td>24 px desktop / 16 px smaller</td>
+                </tr>
+                <tr>
+                  <td>Chart card</td>
+                  <td>6 of 12</td>
+                  <td>24 px desktop / 16 px smaller</td>
+                </tr>
+                <tr>
+                  <td>Full-width card</td>
+                  <td>12 of 12</td>
+                  <td>Optional for wider charts</td>
+                </tr>
+                <tr>
+                  <td>Card padding</td>
+                  <td>—</td>
+                  <td>16 px</td>
+                </tr>
+                <tr>
+                  <td>Card radius</td>
+                  <td>—</td>
+                  <td>8 px</td>
+                </tr>
+              </table>
+              <p></p>
+              <h5>CSS pattern</h5>
+              <pre><code>
+.ctv-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; }
+.ctv-kpi { grid-column: span 4; }
+.ctv-chart { grid-column: span 6; }
+.ctv-full { grid-column: 1 / -1; }
+.ctv-card { min-width: 0; padding: 16px; border-radius: 8px; background: #fff; color: #11268D; box-shadow: 0 2px 8px rgba(59, 17, 141, 0.12); }
+
+/* KPI background colours */
+.ctv-kpi:nth-child(1) { background: #CBE1F6; }
+.ctv-kpi:nth-child(2) { background: #CBCBF6; }
+.ctv-kpi:nth-child(3) { background: #E1CBF6; }
+
+/* Chart accent colours */
+.ctv-chart:nth-child(3n+1) { border-left: 5px solid #3B118D; }
+.ctv-chart:nth-child(3n+2) { border-left: 5px solid #B21665; }
+.ctv-chart:nth-child(3n) { border-left: 5px solid #78118D; }
+              </code></pre>
+            </section>
+            <section id="responsive-screen-sizes">
+              <h3>3.3 Responsive Screen Sizes</h3>
+              <p>
+                The layout adapts to the viewport rather than relying on fixed
+                chart widths. Smaller screens stack cards vertically so that
+                content remains readable without page-level horizontal
+                scrolling.
+              </p>
+              <figure>
+                <img
+                  src="images/responsive-layout.png"
+                  alt="Desktop, tablet and mobile dashboard layouts"
+                />
+                <figcaption>Responsive Layout Patterns</figcaption>
+              </figure>
+              <table>
+                <tr>
+                  <th>Viewport</th>
+                  <th>KPI per row</th>
+                  <th>Charts per row</th>
+                  <th>Gap</th>
+                </tr>
+                <tr>
+                  <td>Desktop ≥ 1200 px</td>
+                  <td>3</td>
+                  <td>2</td>
+                  <td>24 px</td>
+                </tr>
+                <tr>
+                  <td>Tablet 768–1199 px</td>
+                  <td>3</td>
+                  <td>2</td>
+                  <td>16 px</td>
+                </tr>
+                <tr>
+                  <td>Mobile &lt; 768 px</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>16 px</td>
+                </tr>
+              </table>
+              <h5>CSS pattern</h5>
+              <pre><code>@media (max-width: 1199px) {
+  .ctv-grid { gap: 16px; }
+  .ctv-main { padding: 16px; }
+}
+@media (max-width: 767px) {
+  .ctv-kpi, .ctv-chart { grid-column: 1 / -1; }
+  .ctv-header { flex-wrap: wrap; }
+}
+          </code></pre>
+            </section>
+
+            <!-- Updated: Live responsive example -->
+            <section id="live-example">
+              <h3>Live responsive example</h3>
+              <p>This example shows the responsive dashboard layout.</p>
+
+              <figure>
+                <img
+                  src="images/live-responsive-example.png"
+                  alt="Live responsive dashboard layout"
+                />
+                <figcaption>Live Responsive Dashboard Layout</figcaption>
+              </figure>
+
+              <h5>Base CSS</h5>
+              <pre><code>/* Command TV – reusable layout patterns */
+.ctv-main, .ctv-main *, .ctv-header, .ctv-header * { box-sizing: border-box; }
+.ctv-main { max-width: 1440px; margin: auto; padding: 24px; background: #FEFAFB; color: #11268D; }
+.ctv-main section + section { margin-top: 24px; }
+
+/* Header */
+.ctv-header { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 24px; background: #3B118D; color: #FEFAFB; }
+
+/* Chart section heading */
+.ctv-section-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+
+/* Filter button */
+.ctv-filter-btn { padding: 8px 16px; border: none; border-radius: 8px; background: #B21665; color: #FEFAFB; cursor: pointer; }
+
+/* Footer */
+.layout-demo-footer { padding: 16px 24px; background: #E1CBF6; color: #11268D; text-align: center; }
+</code></pre>
+            </section>
+            <!-- End of updated section -->
+          </section>

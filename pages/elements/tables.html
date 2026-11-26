@@ -1,0 +1,109 @@
+<section id="tables" class="library-section ctv-elements">
+  <h2 class="section-heading">Tables</h2>
+
+  <h3>Data Table</h3>
+  <p>
+    Tables display detailed information in rows and columns. They allow users to
+    compare exact values across multiple data records.
+  </p>
+
+  <div class="ctv-element-demo">
+    <div class="ctv-table-wrapper">
+      <table class="ctv-data-table">
+        <caption>
+          Sample Video Performance
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Video</th>
+            <th scope="col">Views</th>
+            <th scope="col">Watch Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Video A</td>
+            <td>12,500</td>
+            <td>320 hours</td>
+          </tr>
+          <tr>
+            <td>Video B</td>
+            <td>9,800</td>
+            <td>245 hours</td>
+          </tr>
+          <tr>
+            <td>Video C</td>
+            <td>7,200</td>
+            <td>180 hours</td>
+          </tr>
+          <tr>
+            <td>Video D</td>
+            <td>5,600</td>
+            <td>140 hours</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h3>Table Styling</h3>
+
+  <ul>
+    <li>Table Header: Pastel purple (#E1CBF6).</li>
+    <li>Data Rows: Alternating light backgrounds.</li>
+    <li>Hover State: Pastel blue (#CBE1F6).</li>
+    <li>Text: Dark blue (#11268D).</li>
+    <li>Responsive: Horizontal scrolling on smaller screens.</li>
+  </ul>
+
+  <h5>HTML Pattern</h5>
+  <pre><code>&lt;div class="ctv-table-wrapper"&gt;
+  &lt;table class="ctv-data-table"&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th scope="col"&gt;Video&lt;/th&gt;
+        &lt;th scope="col"&gt;Views&lt;/th&gt;
+        &lt;th scope="col"&gt;Watch Time&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Video A&lt;/td&gt;
+        &lt;td&gt;12,500&lt;/td&gt;
+        &lt;td&gt;320 hours&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+
+  <h5>CSS Pattern</h5>
+  <pre><code>.ctv-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.ctv-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #11268D;
+}
+
+.ctv-data-table th,
+.ctv-data-table td {
+  padding: 12px;
+  border-bottom: 1px solid #CBCBF6;
+  text-align: left;
+}
+
+.ctv-data-table th {
+  background: #E1CBF6;
+}
+
+.ctv-data-table tbody tr:nth-child(even) {
+  background: #FEFAFB;
+}
+
+.ctv-data-table tbody tr:hover {
+  background: #CBE1F6;
+}</code></pre>
+</section>

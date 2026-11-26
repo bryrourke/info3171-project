@@ -1,0 +1,97 @@
+<section id="navigation-bar" class="library-section ctv-elements">
+  <h2 class="section-heading">Navigation Bar</h2>
+
+  <h3>Horizontal Navigation</h3>
+  <p>
+    Navigation allows users to access different sections of the dashboard. The
+    active item indicates the current section.
+  </p>
+
+  <div class="ctv-element-demo">
+    <nav class="ctv-nav-example" aria-label="Dashboard navigation example">
+      <button type="button" class="ctv-nav-item ctv-nav-active">
+        Overview
+      </button>
+
+      <button type="button" class="ctv-nav-item">Video Analytics</button>
+
+      <button type="button" class="ctv-nav-item">Audience</button>
+
+      <button type="button" class="ctv-nav-item">Reports</button>
+    </nav>
+  </div>
+
+  <h3>Navigation States</h3>
+
+  <div class="ctv-element-demo ctv-nav-states">
+    <div>
+      <button type="button" class="ctv-nav-item">Default</button>
+      <p>Available navigation item.</p>
+    </div>
+
+    <div>
+      <button type="button" class="ctv-nav-item ctv-nav-active">Active</button>
+      <p>Currently selected item.</p>
+    </div>
+
+    <div>
+      <button type="button" class="ctv-nav-item ctv-nav-hover">Hover</button>
+      <p>Pointer interaction feedback.</p>
+    </div>
+  </div>
+
+  <h3>Responsive Navigation</h3>
+  <p>
+    Navigation items wrap on tablet screens and stack vertically on smaller
+    mobile screens.
+  </p>
+
+  <h5>HTML Pattern</h5>
+  <pre><code>&lt;nav class="ctv-nav-example"&gt;
+  &lt;button class="ctv-nav-item ctv-nav-active"&gt;
+    Overview
+  &lt;/button&gt;
+
+  &lt;button class="ctv-nav-item"&gt;
+    Video Analytics
+  &lt;/button&gt;
+
+  &lt;button class="ctv-nav-item"&gt;
+    Audience
+  &lt;/button&gt;
+&lt;/nav&gt;</code></pre>
+
+  <h5>CSS Pattern</h5>
+  <pre><code>.ctv-nav-example {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+  background: #E1CBF6;
+  border-radius: 8px;
+}
+
+.ctv-nav-item {
+  padding: 10px 16px;
+  background: #FEFAFB;
+  color: #11268D;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.ctv-nav-active {
+  background: #CBE1F6;
+  font-weight: 700;
+}
+
+.ctv-nav-item:hover {
+  background: #CBCBF6;
+}
+
+@media (max-width: 767px) {
+  .ctv-nav-example {
+    flex-direction: column;
+  }
+}</code></pre>
+</section>
